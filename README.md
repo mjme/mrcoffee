@@ -64,3 +64,7 @@ can never be left running on its own.
 
 Run `uv run pytest`. On macOS this includes tests against the real caffeinate and app, which briefly
 show a cup in the menu bar.
+
+## License
+
+MIT. See [LICENSE](LICENSE).
