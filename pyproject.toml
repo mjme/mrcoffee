@@ -1,0 +1,21 @@
+[project]
+name = "mrcoffee"
+version = "0.1.0"
+description = "A coffee cup in the macOS menu bar that keeps the Mac awake while Claude Code works."
+readme = "README.md"
+requires-python = ">=3.14"
+dependencies = ["pyobjc-framework-Cocoa>=13; sys_platform == 'darwin'"]
+
+[project.scripts]
+mrcoffee = "mrcoffee.cli:main"
+
+[dependency-groups]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["uv_build>=0.13.7,<0.14.0"]
+build-backend = "uv_build"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = ["macos: needs the real macOS caffeinate and pmset (skipped elsewhere)"]
